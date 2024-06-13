@@ -1,5 +1,6 @@
 "use client";
-import { TonConnectButton, TonConnectUIProvider } from "@tonconnect/ui-react";
+import WalletModal from "@/components/common/Modals/WalletModal";
+import { TonConnectUIProvider } from "@tonconnect/ui-react";
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
       }}
     >
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <TonConnectButton />
+        <div className="w-auto flex items-center justify-center">
+          <WalletModal title="Telegram test" type="SOL" />
+        </div>
       </main>
     </TonConnectUIProvider>
   );
